@@ -32,8 +32,11 @@ var planeSwiper = new Swiper(".planeSwiper", {
 const menu = document.querySelector(".menu");
 const menuBtn = document.querySelector(".menu-btn");
 
-menuBtn.addEventListener("click", () => {
-    menu.classList.toggle('nav-toggle');
-});
+if (menuBtn !== null && menuBtn !== undefined) {
+    menuBtn.addEventListener("click", () => {
+        menu.classList.toggle('nav-toggle');
+    });
+}
 
-document.querySelector(".year").innerHTML = new Date().getFullYear();
+
+// document.querySelector(".year").innerHTML = new Date().getFullYear();
